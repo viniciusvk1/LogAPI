@@ -7,7 +7,6 @@ import org.springframework.stereotype.Repository;
 
 import com.github.viniciusvk1.domain.model.Cliente;
 
-@Repository
 public interface ClienteRepository extends JpaRepository<Cliente, Long>{
 	
 	List<Cliente> findByNome(String nome);
