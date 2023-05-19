@@ -123,9 +123,6 @@ Certifique-se de substituir `{id}` pelos valores correspondentes ao cliente espe
 Contribuição
 Fique à vontade para contribuir para o desenvolvimento deste projeto. Se você encontrar algum problema ou tiver alguma sugestão, abra uma nova issue ou envie um pull request.
 
-Licença
-Este projeto está licenciado sob a licença MIT.
-
 Configuração do banco de dados com JPA e Flyway
 A LogAPI utiliza o JPA (Java Persistence API) em conjunto com o Flyway para criar e migrar o esquema do banco de dados.
 
@@ -167,7 +164,8 @@ ALTER TABLE entrega ADD CONSTRAINT fk_entrega_cliente
 FOREIGN KEY (cliente_id) REFERENCES cliente (id);
 Essas tabelas serão criadas automaticamente quando a aplicação LogAPI for executada pela primeira vez.
 
-Migração de banco de dados com o Flyway
+<h1><b> Migração de banco de dados com o Flyway </h1></b>
+
 O Flyway é uma ferramenta de migração de banco de dados que permite evoluir o esquema do banco de dados de forma controlada. A configuração do Flyway já está incluída no projeto LogAPI.
 
 Os scripts SQL de migração devem ser colocados no diretório src/main/resources/db/migration. Cada script de migração deve ter um nome único, começando com um prefixo que indica a versão do script, seguido por um descritor.
@@ -175,3 +173,7 @@ Os scripts SQL de migração devem ser colocados no diretório src/main/resource
 Por exemplo, o nome do script de migração inicial pode ser V1__create_tables.sql. O prefixo "V1" indica que é a primeira versão do script.
 
 Ao iniciar a aplicação, o Flyway verificará automaticamente os scripts de migração no diretório especificado e aplicará as alterações necessárias para atualizar o esquema do banco de dados.
+
+<h2><b>Licença</h2></b>
+
+Este projeto está licenciado sob a licença MIT.
